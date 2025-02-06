@@ -432,12 +432,6 @@
                         <span class="item-name">Access List</span>
                       </a>
                     </li>
-                    <li>
-                      <a class="nav-link" href="create-access.html">
-                        <i class="ri-anticlockwise-2-fill"></i>
-                        <span class="item-name">Create Access</span>
-                      </a>
-                    </li>
                   </ul>
                 </div>
               </li>
@@ -1116,17 +1110,14 @@
                                 <i class="ri-edit-2-line"></i>
                               </button>
                             </a>
-                            <a href="add-prescriptions.html">
-                              <button
-                                type="button"
-                                class="btn btn-info-subtle btn-rounded btn-sm my-0"
-                                data-bs-toggle="tooltip"
-                                data-bs-placement="bottom"
-                                title="Add Prescriptions"
-                              >
-                                <i class="ri-capsule-fill"></i>
-                              </button>
-                            </a>
+                            <button
+                              type="button"
+                              class="btn btn-info-subtle btn-rounded btn-sm my-0"
+                              data-bs-toggle="modal"
+                              data-bs-target="#preModal"
+                            >
+                              <i class="ri-capsule-fill"></i>
+                            </button>
                             <button
                               type="button"
                               class="btn btn-dark-subtle btn-rounded btn-sm my-0"
@@ -1387,6 +1378,276 @@
                   </tr>
                 </tbody>
               </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal -->
+    <div
+      class="modal fade"
+      id="preModal"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel1">Prescription</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-8">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="new-user-info">
+                      <form>
+                        <div class="row cust-form-input">
+                          <div class="form-group col-md-12">
+                            <label for="age"> Header Note * </label>
+                            <textarea
+                              name=""
+                              id=""
+                              rows="2"
+                              class="form-control"
+                            ></textarea>
+                          </div>
+                          <div class="form-group col-md-4">
+                            <label for="age"> Finding Category * </label>
+                            <select name="" id="" class="form-control">
+                              <option value="">Fever</option>
+                              <option value="">Skin Problem</option>
+                              <option value="">Hair Problems</option>
+                              <option value="">Eye Diseases</option>
+                              <option value="">Nose Diseases</option>
+                            </select>
+                          </div>
+                          <div class="form-group col-md-4">
+                            <label for="age">Finding List * </label>
+                            <select name="" id="" class="form-control">
+                              <option value="">Stomach Pain</option>
+                              <option value="">Diarrhea Or Constipation</option>
+                              <option value="">Headache</option>
+                            </select>
+                          </div>
+                          <div class="form-group col-md-4">
+                            <label for="age">Finding Description * </label>
+                            <input type="text" class="form-control" />
+                          </div>
+                          <div class="form-group col-md-4">
+                            <label for="age">Medicine Category * </label>
+                            <select name="" id="" class="form-control">
+                              <option value="">Syrup</option>
+                              <option value="">Capsule</option>
+                              <option value="">Injection</option>
+                              <option value="">Ointment</option>
+                              <option value="">Cream</option>
+                              <option value="">Surgical</option>
+                              <option value="">Drops</option>
+                              <option value="">Inhalers</option>
+                              <option value="">Implants / patches</option>
+                              <option value="">Liquid</option>
+                              <option value="">Diaper</option>
+                              <option value="">Tablets</option>
+                            </select>
+                          </div>
+                          <div class="form-group col-md-4">
+                            <label for="age">Medicine * </label>
+                            <select name="" id="" class="form-control">
+                              <option value="">Syrup</option>
+                            </select>
+                          </div>
+                          <div class="form-group col-md-4">
+                            <label for="age">Dose * </label>
+                            <select name="" id="" class="form-control">
+                              <option value="">Syrup</option>
+                            </select>
+                          </div>
+                          <div class="form-group col-md-4">
+                            <label for="age">Dose Interval * </label>
+                            <select name="" id="" class="form-control">
+                              <option value="">Syrup</option>
+                            </select>
+                          </div>
+                          <div class="form-group col-md-4">
+                            <label for="age">Dose Duration * </label>
+                            <select name="" id="" class="form-control">
+                              <option value="">Syrup</option>
+                            </select>
+                          </div>
+                          <div class="form-group col-md-4">
+                            <label for="age"> Instruction * </label>
+                            <select name="" id="" class="form-control">
+                              <option value="">Syrup</option>
+                            </select>
+                          </div>
+                          <div class="form-group col-md-4">
+                            <label for="age"> Attachment * </label>
+                            <input type="file" class="form-control" />
+                          </div>
+                          <div class="form-group col-md-12">
+                            <label for="age"> Footer Note * </label>
+                            <textarea
+                              name=""
+                              id=""
+                              rows="2"
+                              class="form-control"
+                            ></textarea>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="new-user-info">
+                      <form>
+                        <div class="row cust-form-input">
+                          <div class="form-group col-md-12">
+                            <label for="pathology">Pathology*</label>
+                            <select
+                              name="pathology"
+                              id="pathology"
+                              class="form-control form-select"
+                            >
+                              <option value="">Select</option>
+                              <option value="chest_xray">Chest X-Ray</option>
+                              <option value="mri">MRI Scan</option>
+                              <option value="ct_scan">CT Scan</option>
+                              <option value="blood_test">Blood Test</option>
+                            </select>
+                          </div>
+                          <div class="form-group col-md-12">
+                            <label for="pathology">Radiology*</label>
+                            <select
+                              name="pathology"
+                              id="pathology"
+                              class="form-control form-select"
+                            >
+                              <option value="">Select</option>
+                              <option value="chest_xray">Chest X-Ray</option>
+                              <option value="mri">MRI Scan</option>
+                              <option value="ct_scan">CT Scan</option>
+                              <option value="blood_test">Blood Test</option>
+                            </select>
+                          </div>
+
+                          <div class="form-group col-md-12">
+                            <label for="dob">Notification To *</label>
+                            <br />
+                            <div
+                              class="checkbox d-inline-block me-2 form-group"
+                            >
+                              <input
+                                type="checkbox"
+                                class="checkbox-input"
+                                id="checkbox1"
+                              />
+                              <label for="checkbox1">Admin </label>
+                            </div>
+                            <div
+                              class="checkbox d-inline-block me-2 form-group"
+                            >
+                              <input
+                                type="checkbox"
+                                class="checkbox-input"
+                                id="checkbox1"
+                              />
+                              <label for="checkbox1">Accountant </label>
+                            </div>
+                            <div
+                              class="checkbox d-inline-block me-2 form-group"
+                            >
+                              <input
+                                type="checkbox"
+                                class="checkbox-input"
+                                id="checkbox1"
+                              />
+                              <label for="checkbox1">Doctor </label>
+                            </div>
+                            <div
+                              class="checkbox d-inline-block me-2 form-group"
+                            >
+                              <input
+                                type="checkbox"
+                                class="checkbox-input"
+                                id="checkbox1"
+                              />
+                              <label for="checkbox1">Pharmacist </label>
+                            </div>
+                            <div
+                              class="checkbox d-inline-block me-2 form-group"
+                            >
+                              <input
+                                type="checkbox"
+                                class="checkbox-input"
+                                id="checkbox1"
+                              />
+                              <label for="checkbox1">Pathologist </label>
+                            </div>
+                            <div
+                              class="checkbox d-inline-block me-2 form-group"
+                            >
+                              <input
+                                type="checkbox"
+                                class="checkbox-input"
+                                id="checkbox1"
+                              />
+                              <label for="checkbox1">Radiologist </label>
+                            </div>
+                            <div
+                              class="checkbox d-inline-block me-2 form-group"
+                            >
+                              <input
+                                type="checkbox"
+                                class="checkbox-input"
+                                id="checkbox1"
+                              />
+                              <label for="checkbox1">Super Admin </label>
+                            </div>
+                            <div
+                              class="checkbox d-inline-block me-2 form-group"
+                            >
+                              <input
+                                type="checkbox"
+                                class="checkbox-input"
+                                id="checkbox1"
+                              />
+                              <label for="checkbox1">Receptionist </label>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="col-12">
+              <div class="card p-4">
+                <div class="d-flex gap-2 text-end">
+                  <button type="submit" class="btn btn-danger-subtle">
+                    Cancel
+                  </button>
+                  <button type="submit" class="btn btn-primary-subtle">
+                    Save
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>

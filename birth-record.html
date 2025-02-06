@@ -197,7 +197,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="opd-patients-out.html">
+                <a class="nav-link" href="opd-patients-out.html">
                   <i
                     class="ri-hospital-fill"
                     data-bs-toggle="tooltip"
@@ -289,7 +289,7 @@
                     <li class="">
                       <a class="nav-link" href="add-doctor.html">
                         <i class="ri-user-add-fill"> </i>
-                        <span class="item-name">Add Doctor</span>
+                        <span class="item-name">Add Staff</span>
                       </a>
                     </li>
                   </ul>
@@ -324,7 +324,7 @@
               <li class="nav-item">
                 <div class="colors">
                   <a
-                    class="nav-link"
+                    class="nav-link active"
                     data-bs-toggle="collapse"
                     href="#birth"
                     role="button"
@@ -361,7 +361,7 @@
                     data-bs-parent="#sidebar-menu"
                   >
                     <li>
-                      <a class="nav-link" href="birth-record.html">
+                      <a class="nav-link active" href="birth-record.html">
                         <i class="ri-tablet-fill"></i>
                         <span class="item-name">Birth Record</span>
                       </a>
@@ -970,47 +970,179 @@
           </nav>
         </div>
         <!--Nav End-->
-
         <div class="content-inner pb-0 container-fluid" id="page_layout">
           <div class="row">
-            <div class="col-lg-12">
+            <div class="col-sm-12">
               <div class="card">
                 <div class="card-header d-flex justify-content-between">
                   <div class="header-title">
-                    <h4 class="card-title">OPD Patient Billing Details</h4>
+                    <h4 class="card-title">Birth Record</h4>
                   </div>
+
+                  <span class="table-add float-end mb-3 me-2">
+                    <button
+                      class="btn btn-sm btn-primary-subtle"
+                      data-bs-toggle="modal"
+                      data-bs-target="#recordModal"
+                    >
+                      <i class="ri-add-fill"
+                        ><span class="ps-1">Add Birth Record</span></i
+                      >
+                    </button>
+                  </span>
                 </div>
                 <div class="card-body">
+                  <div class="row mb-4">
+                    <div class="col-lg-8">
+                      <div
+                        class="btn-group btn-group-sm mt-3"
+                        role="group"
+                        aria-label="Basic example"
+                      >
+                        <button type="button" class="btn btn-success-subtle">
+                          Excel
+                        </button>
+                        <button type="button" class="btn btn-primary-subtle">
+                          CSV
+                        </button>
+                        <button type="button" class="btn btn-danger-subtle">
+                          PDF
+                        </button>
+                        <button type="button" class="btn btn-primary-subtle">
+                          Print
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                      <div class="form-group input-group mb-0 search-input">
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Type here to search..."
+                        />
+                        <span class="input-group-text">
+                          <svg
+                            class="icon-20 text-primary"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <circle
+                              cx="11.7669"
+                              cy="11.7666"
+                              r="8.98856"
+                              stroke="currentColor"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></circle>
+                            <path
+                              d="M18.0186 18.4851L21.5426 22"
+                              stroke="currentColor"
+                              stroke-width="1.5"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></path>
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
                   <div class="table-responsive">
                     <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th scope="col">Reference No</th>
+                          <th scope="col">Case ID</th>
+                          <th scope="col">Child Name</th>
+                          <th scope="col">Gender</th>
+                          <th scope="col">Birth Date</th>
+                          <th scope="col">Mother Name</th>
+                          <th scope="col">Father Name</th>
+                          <th scope="col">Report</th>
+                          <th scope="col">Action</th>
+                        </tr>
+                      </thead>
                       <tbody>
                         <tr>
-                          <th scope="row">Patient Id</th>
-                          <td>781</td>
-                          <th scope="row">Marital Status</th>
-                          <td>Single</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">Email</th>
-                          <td>JeffreyMRansom@dayrep.com</td>
-                          <th scope="row">Age</th>
-                          <td>17 Year 10 Month 30 Days (As Of Date )</td>
-                        </tr>
-
-                        <tr>
-                          <th scope="row">Gender</th>
+                          <th scope="row">BREF75</th>
+                          <td>5827</td>
+                          <td>
+                            <span class="badge bg-info">David</span>
+                          </td>
                           <td>Male</td>
-                          <th scope="row">Phone</th>
-                          <td>8596558012</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">Address</th>
-                          <td>712 Mayo Street Covington, KY 41011</td>
-                          <th scope="row">Guardian Name</th>
-                          <td>Marting . Ransom</td>
+
+                          <td>02/12/2025 01:30 PM</td>
+
+                          <td>MAIREENA</td>
+                          <td>Faran</td>
+                          <td>Normal</td>
+
+                          <td>
+                            <button
+                              type="button"
+                              class="btn btn-dark-subtle btn-rounded btn-sm my-0"
+                              data-bs-toggle="modal"
+                              data-bs-target="#viewModal"
+                            >
+                              <i class="ri-eye-fill"></i>
+                            </button>
+                            <button
+                              type="button"
+                              class="btn btn-info-subtle btn-rounded btn-sm my-0"
+                              data-bs-toggle="modal"
+                              data-bs-target="#editModal"
+                            >
+                              <i class="ri-edit-2-line"></i>
+                            </button>
+                            <button
+                              type="button"
+                              class="btn btn-danger-subtle btn-rounded btn-sm my-0"
+                            >
+                              <i class="ri-delete-bin-2-fill"></i>
+                            </button>
+                          </td>
                         </tr>
                       </tbody>
                     </table>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="d-flex justify-content-end">
+                    <nav aria-label="Page navigation example mt-5">
+                      <ul class="pagination mb-0">
+                        <li class="page-item">
+                          <a
+                            class="page-link rtl-pageLink-pre"
+                            href="#"
+                            aria-label="Previous"
+                          >
+                            <span aria-hidden="true">«</span>
+                          </a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">1</a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">2</a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">3</a>
+                        </li>
+                        <li class="page-item">
+                          <a
+                            class="page-link rtl-pageLink-next"
+                            href="#"
+                            aria-label="Next"
+                          >
+                            <span aria-hidden="true">»</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </nav>
                   </div>
                 </div>
               </div>
@@ -1039,6 +1171,460 @@
     <!-- Live Customize start -->
 
     <!-- Wrapper End-->
+
+    <!-- add modal -->
+    <div
+      class="modal fade"
+      id="recordModal"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel1">
+              Add Birth Record
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="row cust-form-input">
+                <div class="form-group col-md-3">
+                  <label for="name">Child Name *</label>
+                  <input
+                    type="text"
+                    class="form-control my-2"
+                    id="name"
+                    placeholder=""
+                  />
+                </div>
+                <div class="form-group col-md-3">
+                  <label for="fname">Gender*</label>
+                  <select class="form-control my-2" id="">
+                    <option>Select</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                  </select>
+                </div>
+
+                <div class="form-group col-md-3">
+                  <label for="no">Weight*</label>
+                  <input
+                    type="text"
+                    class="form-control my-2"
+                    id="no"
+                    placeholder=""
+                  />
+                </div>
+                <div class="form-group col-md-3">
+                  <label for="no">Child Photo *</label>
+                  <input
+                    type="file"
+                    class="form-control my-2"
+                    id="no"
+                    placeholder=""
+                  />
+                </div>
+                <div class="form-group col-md-3">
+                  <label for="no">Birth Date*</label>
+                  <input
+                    type="date"
+                    class="form-control my-2"
+                    id="no"
+                    placeholder=""
+                  />
+                </div>
+                <div class="form-group col-md-3">
+                  <label for="no">Phone*</label>
+                  <input
+                    type="text"
+                    class="form-control my-2"
+                    id="no"
+                    placeholder=""
+                  />
+                </div>
+
+                <div class="form-group col-md-3">
+                  <label for="no">Address*</label>
+                  <input
+                    type="text"
+                    class="form-control my-2"
+                    id="no"
+                    placeholder=""
+                  />
+                </div>
+
+                <div class="form-group col-md-3">
+                  <label for="no">Case ID*</label>
+                  <input
+                    type="text"
+                    class="form-control my-2"
+                    id="no"
+                    placeholder=""
+                  />
+                </div>
+
+                <div class="form-group col-md-3">
+                  <label for="no">Mother Name * *</label>
+                  <input
+                    type="text"
+                    class="form-control my-2"
+                    id="no"
+                    placeholder=""
+                  />
+                </div>
+
+                <div class="form-group col-md-3">
+                  <label for="no">Mother Photo *</label>
+                  <input
+                    type="file"
+                    class="form-control my-2"
+                    id="no"
+                    placeholder=""
+                  />
+                </div>
+
+                <div class="form-group col-md-6">
+                  <label for="no">Father Name*</label>
+                  <input
+                    type="text"
+                    class="form-control my-2"
+                    id="no"
+                    placeholder=""
+                  />
+                </div>
+
+                <div class="form-group col-md-6">
+                  <label for="no">Father Photo *</label>
+                  <input
+                    type="file"
+                    class="form-control my-2"
+                    id="no"
+                    placeholder=""
+                  />
+                </div>
+
+                <div class="form-group col-md-6">
+                  <label for="no">Report *</label>
+                  <input
+                    type="text"
+                    class="form-control my-2"
+                    id="no"
+                    placeholder=""
+                  />
+                </div>
+
+                <div class="form-group col-md-12">
+                  <label for="no">Attach Document Photo *</label>
+                  <input
+                    type="file"
+                    class="form-control my-2"
+                    id="no"
+                    placeholder=""
+                  />
+                </div>
+              </div>
+              <hr />
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary-subtle"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary-subtle">
+              Save Changes
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- edit modal -->
+    <div
+      class="modal fade"
+      id="editModal"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel1">
+              Edit Birth Record
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="row cust-form-input">
+                <div class="form-group col-md-3">
+                  <label for="name">Child Name *</label>
+                  <input
+                    type="text"
+                    class="form-control my-2"
+                    id="name"
+                    placeholder=""
+                  />
+                </div>
+                <div class="form-group col-md-3">
+                  <label for="fname">Gender*</label>
+                  <select class="form-control my-2" id="">
+                    <option>Select</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                  </select>
+                </div>
+
+                <div class="form-group col-md-3">
+                  <label for="no">Weight*</label>
+                  <input
+                    type="text"
+                    class="form-control my-2"
+                    id="no"
+                    placeholder=""
+                  />
+                </div>
+                <div class="form-group col-md-3">
+                  <label for="no">Child Photo *</label>
+                  <input
+                    type="file"
+                    class="form-control my-2"
+                    id="no"
+                    placeholder=""
+                  />
+                </div>
+                <div class="form-group col-md-3">
+                  <label for="no">Birth Date*</label>
+                  <input
+                    type="date"
+                    class="form-control my-2"
+                    id="no"
+                    placeholder=""
+                  />
+                </div>
+                <div class="form-group col-md-3">
+                  <label for="no">Phone*</label>
+                  <input
+                    type="text"
+                    class="form-control my-2"
+                    id="no"
+                    placeholder=""
+                  />
+                </div>
+
+                <div class="form-group col-md-3">
+                  <label for="no">Address*</label>
+                  <input
+                    type="text"
+                    class="form-control my-2"
+                    id="no"
+                    placeholder=""
+                  />
+                </div>
+
+                <div class="form-group col-md-3">
+                  <label for="no">Case ID*</label>
+                  <input
+                    type="text"
+                    class="form-control my-2"
+                    id="no"
+                    placeholder=""
+                  />
+                </div>
+
+                <div class="form-group col-md-3">
+                  <label for="no">Mother Name * *</label>
+                  <input
+                    type="text"
+                    class="form-control my-2"
+                    id="no"
+                    placeholder=""
+                  />
+                </div>
+
+                <div class="form-group col-md-3">
+                  <label for="no">Mother Photo *</label>
+                  <input
+                    type="file"
+                    class="form-control my-2"
+                    id="no"
+                    placeholder=""
+                  />
+                </div>
+
+                <div class="form-group col-md-6">
+                  <label for="no">Father Name*</label>
+                  <input
+                    type="text"
+                    class="form-control my-2"
+                    id="no"
+                    placeholder=""
+                  />
+                </div>
+
+                <div class="form-group col-md-6">
+                  <label for="no">Father Photo *</label>
+                  <input
+                    type="file"
+                    class="form-control my-2"
+                    id="no"
+                    placeholder=""
+                  />
+                </div>
+
+                <div class="form-group col-md-6">
+                  <label for="no">Report *</label>
+                  <input
+                    type="text"
+                    class="form-control my-2"
+                    id="no"
+                    placeholder=""
+                  />
+                </div>
+
+                <div class="form-group col-md-12">
+                  <label for="no">Attach Document Photo *</label>
+                  <input
+                    type="file"
+                    class="form-control my-2"
+                    id="no"
+                    placeholder=""
+                  />
+                </div>
+              </div>
+              <hr />
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary-subtle"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary-subtle">
+              Save Changes
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- view modal -->
+    <div
+      class="modal fade"
+      id="viewModal"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel1">
+              Birth Record Details
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                <tbody>
+                  <tr>
+                    <th scope="row">Child Name</th>
+                    <td>David</td>
+                    <th scope="row">Mother Name</th>
+                    <td>MAIREENA</td>
+                    <th scope="row">Father Name</th>
+                    <td>Faran</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Case ID</th>
+                    <td>6801</td>
+                    <th scope="row">Birth Date</th>
+                    <td>01/12/2025 12:47 PM</td>
+                    <th scope="row">Weight</th>
+                    <td>2kg</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Gender</th>
+                    <td>Female</td>
+                    <th scope="row">Phone</th>
+                    <td>8909789575</td>
+                    <th scope="row">Address</th>
+                    <td>MR.Road 201</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Document</th>
+                    <td></td>
+                    <th scope="row">Report</th>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Child Photo</th>
+                    <td>
+                      <div>
+                        <img
+                          src="assets/images/user/01.jpg"
+                          alt=""
+                          srcset=""
+                          width="50"
+                        />
+                      </div>
+                    </td>
+                    <th scope="row">Mother Photo</th>
+                    <td>
+                      <div>
+                        <img
+                          src="assets/images/user/01.jpg"
+                          alt=""
+                          srcset=""
+                          width="50"
+                        />
+                      </div>
+                    </td>
+                    <th scope="row">Father Photo</th>
+                    <td>
+                      <div>
+                        <img
+                          src="assets/images/user/01.jpg"
+                          alt=""
+                          srcset=""
+                          width="50"
+                        />
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Library Bundle Script -->
     <script src="assets/js/core/libs.min.js"></script>
