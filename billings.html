@@ -161,7 +161,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="appointments.html">
+                <a class="nav-link" href="appointments.html">
                   <i
                     class="ri-calendar-2-line"
                     data-bs-toggle="tooltip"
@@ -297,7 +297,7 @@
               </li>
 
               <li class="nav-item">
-                <a class="nav-link" href="billings.html">
+                <a class="nav-link active" href="billings.html">
                   <i
                     class="ri-money-cny-box-fill"
                     data-bs-toggle="tooltip"
@@ -977,175 +977,95 @@
         </div>
         <!--Nav End-->
 
-        <div class="content-inner pb-0 container-fluid" id="page_layout">
+        <div class="content-inner container-fluid pb-0" id="page_layout">
           <div class="row">
-            <div class="col-lg-12">
-              <div class="card">
-                <div class="card-header d-flex justify-content-between">
-                  <div class="header-title">
-                    <h4 class="card-title">Create Appointment</h4>
+            <div class="col-lg-6">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="card bg-light-subtle border-1">
+                    <div class="card-body">
+                      <a href="appointments-billings.html">
+                        <div
+                          class="d-flex align-items-center justify-content-between"
+                        >
+                          <div class="rounded-circle card-icon bg-primary">
+                            <i class="ri-calendar-2-fill text-white"></i>
+                          </div>
+                          <div class="text-end">
+                            <h5 class="text-dark">Appointments</h5>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
                   </div>
                 </div>
+
+                <div class="col-md-6">
+                  <div class="card bg-light-subtle border-1">
+                    <div class="card-body">
+                      <a href="opd-billings.html">
+                        <div
+                          class="d-flex align-items-center justify-content-between"
+                        >
+                          <div class="rounded-circle card-icon bg-primary">
+                            <i class="ri-capsule-fill text-white"></i>
+                          </div>
+                          <div class="text-end">
+                            <h5 class="text-dark">OPD</h5>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="card">
+                <div class="card-header">
+                  <h4>OPD/IPD Billing Through Case Id</h4>
+                </div>
                 <div class="card-body">
-                  <div class="new-user-info">
-                    <form>
-                      <div class="row cust-form-input">
-                        <div class="form-group col-md-6">
-                          <label for="name">Patient Name *</label>
-                          <input
-                            type="text"
-                            class="form-control my-2"
-                            id="name"
-                            placeholder=""
-                          />
-                        </div>
-                        <div class="form-group col-md-6">
-                          <label for="no">Appointment No. *</label>
-                          <input
-                            type="text"
-                            class="form-control my-2"
-                            id="no"
-                            placeholder=""
-                          />
-                        </div>
-                        <div class="form-group col-md-6">
-                          <label for="fname">Doctor:</label>
-                          <select class="form-control my-2" id="">
-                            <option>Select Doctor</option>
-                            <option>Olivier Thomas (531)</option>
-                            <option>Olivier Thomas (531)</option>
-                            <option>Olivier Thomas (531)</option>
-                            <option>Olivier Thomas (531)</option>
-                            <option>Olivier Thomas (531)</option>
-                            <option>Olivier Thomas (531)</option>
-                          </select>
-                        </div>
-                        <div class="form-group col-md-6">
-                          <label for="Fees">Doctor Fees ($) *</label>
-                          <input
-                            type="text"
-                            class="form-control my-2 bg-light"
-                            id="Fees"
-                            placeholder=""
-                            disabled
-                          />
-                        </div>
-                        <div class="form-group col-md-6">
-                          <label for="fname">Shift:</label>
-                          <select class="form-control my-2" id="">
-                            <option>Select Shift</option>
-                            <option>Morning</option>
-                            <option>Afternoon</option>
-                            <option>Evening</option>
-                          </select>
-                        </div>
-                        <div class="form-group col-md-6">
-                          <label for="exampleInputdatetime"
-                            >Appointment Date *</label
-                          >
-                          <input
-                            type="datetime-local"
-                            class="form-control my-2"
-                            id="exampleInputdatetime"
-                            value="2019-12-19T13:45:00"
-                          />
-                        </div>
-                        <div class="form-group col-md-6">
-                          <label for="add2">Slot *</label>
-                          <select class="form-control my-2" id="">
-                            <option>Select Slot</option>
-                            <option>10 AM - 12 PM</option>
-                            <option>12 PM - 3 PM</option>
-                            <option>3 PM - 9 PM</option>
-                          </select>
-                        </div>
-                        <div class="form-group col-md-6">
-                          <label for="add2">Appointment Priority *</label>
-                          <select class="form-control my-2" id="">
-                            <option>Select Priority</option>
-                            <option>Very Urgent</option>
-                            <option>Urgent</option>
-                            <option>Normal</option>
-                            <option>Low</option>
-                          </select>
-                        </div>
-                        <div class="form-group col-md-6">
-                          <label for="add2">Payment Mode *</label>
-                          <select class="form-control my-2" id="">
-                            <option>Select Mode</option>
-                            <option>Cash</option>
-                            <option>Cheque</option>
-                            <option>Transfer to Bank Account</option>
-                            <option>UPI</option>
-                            <option>Online</option>
-                            <option>Other</option>
-                          </select>
-                        </div>
-                        <div class="form-group col-md-6">
-                          <label for="add2">Status *</label>
-                          <select class="form-control my-2" id="">
-                            <option>Select</option>
-                            <option>Pending</option>
-                            <option>Approved</option>
-                            <option>Cancel</option>
-                          </select>
-                        </div>
-                        <div class="form-group col-md-6">
-                          <label for="Percentage">Discount Percentage *</label>
-                          <input
-                            type="text"
-                            class="form-control my-2"
-                            id="Percentage"
-                            placeholder=""
-                          />
-                        </div>
-                        <div class="form-group col-md-6">
-                          <label for="altconno"
-                            >Live Consultant (On Video Conference) *
-                          </label>
-                          <select class="form-control my-2" id="">
-                            <option>Select</option>
-                            <option>Yes</option>
-                            <option>No</option>
-                          </select>
-                        </div>
-                        <div class="form-group col-md-12">
-                          <label for="mobno">Message *</label>
-                          <textarea
-                            name=""
-                            id=""
-                            class="form-control"
-                            rows="3"
-                          ></textarea>
-                        </div>
-
-                        <div class="form-group col-md-12">
-                          <label for="mobno">Alternate Address *</label>
-                          <textarea
-                            name=""
-                            id=""
-                            class="form-control"
-                            rows="3"
-                          ></textarea>
-                        </div>
-                      </div>
-                      <hr />
-
-                      <div class="d-flex gap-2">
-                        <button type="submit" class="btn btn-danger-subtle">
-                          Cancel
-                        </button>
-                        <button type="submit" class="btn btn-primary-subtle">
-                          Save
-                        </button>
-                      </div>
-                    </form>
+                  <div class="form-group input-group mb-0 search-input">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter Case ID"
+                    />
+                    <span class="input-group-text">
+                      <svg
+                        class="icon-20 text-primary"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle
+                          cx="11.7669"
+                          cy="11.7666"
+                          r="8.98856"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></circle>
+                        <path
+                          d="M18.0186 18.4851L21.5426 22"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        ></path>
+                      </svg>
+                    </span>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
         <!-- Footer Section Start -->
         <footer class="footer rounded-pill mb-4 mx-0 mx-md-4">
           <div class="footer-body">

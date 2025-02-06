@@ -308,18 +308,7 @@
                   <span class="item-name">Billings</span>
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="prescriptions.html">
-                  <i
-                    class="ri-file-pdf-2-fill"
-                    data-bs-toggle="tooltip"
-                    title="Dashboard"
-                    data-bs-placement="right"
-                  >
-                  </i>
-                  <span class="item-name">Prescriptions</span>
-                </a>
-              </li>
+
               <li class="nav-item">
                 <a class="nav-link" href="calendar.html">
                   <i
@@ -990,15 +979,241 @@
 
         <div class="content-inner pb-0 container-fluid" id="page_layout">
           <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-6">
               <div class="card">
                 <div class="card-header d-flex justify-content-between">
                   <div class="header-title">
-                    <h4 class="card-title">Create IPD Appointment</h4>
+                    <h4 class="card-title">Create IPD Patients</h4>
                   </div>
                 </div>
                 <div class="card-body">
-                  <div class="new-user-info"></div>
+                  <div class="new-user-info">
+                    <form>
+                      <div class="row cust-form-input">
+                        <div class="form-group col-md-6">
+                          <label for="name">Patient ID *</label>
+                          <input
+                            type="text"
+                            class="form-control my-2"
+                            id="name"
+                            placeholder=""
+                          />
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="Guardian">Patient Name</label>
+                          <input
+                            type="text"
+                            class="form-control my-2"
+                            id="Guardian"
+                            placeholder=""
+                          />
+                        </div>
+
+                        <div class="form-group col-md-6">
+                          <label for="dob">Symptoms Type *</label>
+                          <input
+                            type="text"
+                            class="form-control my-2"
+                            id="dob"
+                            placeholder=""
+                          />
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="age">Symptoms Title * </label>
+                          <input
+                            type="text"
+                            class="form-control my-2"
+                            id="age"
+                            placeholder=""
+                          />
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="age"> Symptoms Description * </label>
+                          <textarea
+                            name=""
+                            id=""
+                            rows="2"
+                            class="form-control"
+                          ></textarea>
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="age"> Note * </label>
+                          <textarea
+                            name=""
+                            id=""
+                            rows="2"
+                            class="form-control"
+                          ></textarea>
+                        </div>
+                        <div class="form-group col-md-12">
+                          <label for="age"> Any Known Allergies * </label>
+                          <textarea
+                            name=""
+                            id=""
+                            rows="2"
+                            class="form-control"
+                          ></textarea>
+                        </div>
+                        <div class="form-group col-md-12">
+                          <label for="age"> Previous Medical Issue* </label>
+                          <textarea
+                            name=""
+                            id=""
+                            cols="1"
+                            rows="1"
+                            class="form-control"
+                          ></textarea>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="card">
+                <div class="card-header d-flex justify-content-between">
+                  <div class="header-title">
+                    <h4 class="card-title">Fill IPD Patients</h4>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="new-user-info">
+                    <form>
+                      <div class="row cust-form-input">
+                        <div class="form-group col-md-6">
+                          <label for="name">Admission Date *</label>
+                          <input
+                            type="date"
+                            class="form-control my-2"
+                            id="name"
+                            placeholder=""
+                          />
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="Guardian">Case</label>
+                          <input
+                            type="text"
+                            class="form-control my-2"
+                            id="Guardian"
+                            placeholder=""
+                          />
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="Guardian">TPA *</label>
+                          <input
+                            type="text"
+                            class="form-control my-2"
+                            id="Guardian"
+                            placeholder=""
+                            disabled
+                          />
+                        </div>
+
+                        <div class="form-group col-md-6">
+                          <label for="dob">Casualty*</label>
+                          <select
+                            name=""
+                            id=""
+                            class="form-control form-select"
+                          >
+                            <option value="">No</option>
+                            <option value="">Yes</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="dob">Old Patient *</label>
+                          <select
+                            name=""
+                            id=""
+                            class="form-control form-select"
+                          >
+                            <option value="">No</option>
+                            <option value="">Yes</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="age">Credit Limit (Rs) * </label>
+                          <input
+                            type="text"
+                            class="form-control my-2"
+                            id="age"
+                            placeholder=""
+                          />
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="age">Reference* </label>
+                          <input
+                            type="text"
+                            class="form-control my-2"
+                            id="age"
+                            placeholder=""
+                          />
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="dob">Consultant Doctor *</label>
+                          <select
+                            name=""
+                            id=""
+                            class="form-control form-select"
+                          >
+                            <option value="">select Doctor</option>
+                            <option value="">Amit Sing(1001)</option>
+                            <option value="">Reyan Jani(1002)</option>
+                          </select>
+                        </div>
+
+                        <div class="form-group col-md-6">
+                          <label for="dob">Bed Group *</label>
+                          <select
+                            name=""
+                            id=""
+                            class="form-control form-select"
+                          >
+                            <option value="">select Bed</option>
+                            <option value="">VIP Ward - Ground Floor</option>
+                            <option value="">Private Ward - Third Floor</option>
+                            <option value="">
+                              General Ward Male - Third Floor
+                            </option>
+                            <option value="">ICU - 2nd Floor</option>
+                            <option value="">NICU - 2nd Floor</option>
+                            <option value="">AC (Normal) - 1st Floor</option>
+                            <option value="">Non-AC - 4th Floor</option>
+                          </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="dob">Bed No *</label>
+                          <select
+                            name=""
+                            id=""
+                            class="form-control form-select"
+                          >
+                            <option value="">select Bed</option>
+                            <option value="">FF-111</option>
+                            <option value="">FF-112</option>
+                            <option value="">FF-113</option>
+                            <option value="">FF-114</option>
+                            <option value="">FF-115</option>
+                            <option value="">FF-116</option>
+                          </select>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="card p-4">
+                <div class="d-flex gap-2 text-end">
+                  <button type="submit" class="btn btn-danger-subtle">
+                    Cancel
+                  </button>
+                  <button type="submit" class="btn btn-primary-subtle">
+                    Save
+                  </button>
                 </div>
               </div>
             </div>

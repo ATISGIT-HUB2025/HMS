@@ -308,18 +308,7 @@
                   <span class="item-name">Billings</span>
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="prescriptions.html">
-                  <i
-                    class="ri-file-pdf-2-fill"
-                    data-bs-toggle="tooltip"
-                    title="Dashboard"
-                    data-bs-placement="right"
-                  >
-                  </i>
-                  <span class="item-name">Prescriptions</span>
-                </a>
-              </li>
+
               <li class="nav-item">
                 <a class="nav-link" href="calendar.html">
                   <i
@@ -1091,11 +1080,13 @@
                           <td>6921</td>
                           <td>02/04/2025 02:48 PM</td>
                           <td>
-                            Thirst Thirst is the feeling of needing to drink
-                            something. It occurs whenever the body is dehydrated
-                            for any reason. Any condition that can result in a
-                            loss of body water can lead to thirst or excessive
-                            thirst.
+                            <p>
+                              Thirst Thirst is the feeling of needing to drink
+                              something. It occurs whenever the body is
+                              dehydrated for any reason. Any condition that can
+                              result in a loss of body water can lead to thirst
+                              or excessive thirst.
+                            </p>
                           </td>
 
                           <td>No</td>
@@ -1107,6 +1098,9 @@
                               <button
                                 type="button"
                                 class="btn btn-dark-subtle btn-rounded btn-sm my-0"
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="bottom"
+                                title="Show"
                               >
                                 <i class="ri-eye-fill"></i>
                               </button>
@@ -1115,13 +1109,40 @@
                               <button
                                 type="button"
                                 class="btn btn-info-subtle btn-rounded btn-sm my-0"
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="bottom"
+                                title="Edit OPD"
                               >
                                 <i class="ri-edit-2-line"></i>
                               </button>
                             </a>
+                            <a href="add-prescriptions.html">
+                              <button
+                                type="button"
+                                class="btn btn-info-subtle btn-rounded btn-sm my-0"
+                                data-bs-toggle="tooltip"
+                                data-bs-placement="bottom"
+                                title="Add Prescriptions"
+                              >
+                                <i class="ri-capsule-fill"></i>
+                              </button>
+                            </a>
+                            <button
+                              type="button"
+                              class="btn btn-dark-subtle btn-rounded btn-sm my-0"
+                              data-bs-toggle="modal"
+                              data-bs-target="#exampleModal"
+                              data-bs-toggle="tooltip"
+                            >
+                              <i class="ri-file-2-fill"></i>
+                            </button>
+
                             <button
                               type="button"
                               class="btn btn-danger-subtle btn-rounded btn-sm my-0"
+                              data-bs-toggle="tooltip"
+                              data-bs-placement="bottom"
+                              title="Delete"
                             >
                               <i class="ri-delete-bin-2-fill"></i>
                             </button>
@@ -1192,6 +1213,185 @@
     <!-- Live Customize start -->
 
     <!-- Wrapper End-->
+
+    <!-- modal -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel1">Prescription</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <h2>Smart Hospital & Research Center</h2>
+              </div>
+              <div class="col-lg-6">
+                <p style="margin: 0">Address:-Pune | MH | India :-41111</p>
+                <p style="margin: 0">Phone No.:- +91 9090909090</p>
+                <p style="margin: 0">Email:- hospital@gmail.com</p>
+                <p style="margin: 0">web:- hospital.com</p>
+              </div>
+            </div>
+            <hr />
+            <div class="bg-dark p-2 text-center">
+              <h4 class="text-warning">OPD Prescriptions</h4>
+            </div>
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                <tbody>
+                  <tr>
+                    <th scope="row">Prescription</th>
+                    <td>OPDN6896</td>
+                    <th scope="row">Date</th>
+                    <td>02/05/2025</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">OPD ID</th>
+                    <td>OPDN6943</td>
+                    <th scope="row">OPD Checkup ID</th>
+                    <td>CHKID6946</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Patient Name</th>
+                    <td>Chris Benjamin (1144)</td>
+                    <th scope="row">Age</th>
+                    <td>25 Year 10 Month 17 Days (As Of Date )</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Gender</th>
+                    <td>Male</td>
+                    <th scope="row">Blood Group</th>
+                    <td>A+</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Phone</th>
+                    <td>8906786705</td>
+                    <th scope="row">Known Allergies</th>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Email</th>
+                    <td>chris76@gmail.com</td>
+                    <th scope="row">Prescribe By</th>
+                    <td>Sonia Bush (9002)</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Consultant Doctor</th>
+                    <td>Sonia Bush (9002)</td>
+                    <th scope="row">Generated By</th>
+                    <td>Super Admin (9001)</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <p>
+                    This invoice is printed electronically, so no signature is
+                    required
+                  </p>
+                </tfoot>
+              </table>
+            </div>
+
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                <tbody>
+                  <tr>
+                    <th scope="row">Symptoms</th>
+                    <td>
+                      <div>
+                        <p>
+                          Cramps and injuries Muscle pain: Muscle spasms, cramps
+                          and injuries can all cause muscle pain. Some
+                          infections or tumors may also lead to muscle pain.
+                          Tendon and ligament pain: Ligaments and tendons are
+                          strong bands of tissue that connect your joints and
+                          bones. Sprains, strains and overuse injuries can lead
+                          to tendon or ligament pain.
+                        </p>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Finding</th>
+                    <td>
+                      <p>
+                        Osteoporosis Bone density problems may occur because the
+                        body loses too much bone tissue, makes too little of it,
+                        or some combination of both. It tends to be symptomless.
+                        That is, people with osteoporosis tend not to know they
+                        have it – until a bone fracture has them visiting a
+                        doctor who makes the diagnosis.
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="table-responsive">
+              <h4>Medicines</h4>
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="row">#</th>
+                    <th scope="row">Medicine Category</th>
+                    <th scope="row">Medicine</th>
+                    <th scope="row">Dosage</th>
+                    <th scope="row">Dose Interval</th>
+                    <th scope="row">Dose Duration</th>
+                    <th scope="row">Instruction</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td scope="row">#</td>
+                    <td scope="row">Injection</td>
+                    <td scope="row">BICASOL</td>
+                    <td scope="row">0.5 CT</td>
+                    <td scope="row">Only one a day</td>
+                    <td scope="row">1 Week</td>
+                    <td scope="row"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="table-responsive">
+              <table class="table table-bordered">
+                <tbody>
+                  <tr>
+                    <th scope="row">Pathology Test</th>
+                    <td>
+                      <div>
+                        <p>1. Abdomen X-rays (AX)</p>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Radiology Test</th>
+                    <td>
+                      <p>Functional MRI (RI) (FMRI)</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Library Bundle Script -->
     <script src="assets/js/core/libs.min.js"></script>
